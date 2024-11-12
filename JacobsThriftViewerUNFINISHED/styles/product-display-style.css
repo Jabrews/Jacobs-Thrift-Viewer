@@ -1,0 +1,274 @@
+html {
+  background-color: #150505;
+}
+
+* {
+  color: #FFF;
+  font-family: Montserrat;
+  box-sizing: border-box;
+  
+}
+
+
+:root {
+--body-color: #FFFFFF;
+--title-color: #000000;
+--first-color: #FF0000;
+--first-color-alt: #CC0000;
+--white-color: #FFFFFF;
+--font-semi-bold: 600;
+--normal-font-size: 1rem;
+--h2-font-size: 1.5rem;
+--body-font: 'Montserrat', sans-serif;
+--z-modal: 10;
+}
+
+/* showcase container */
+
+.product-showcase-parent-container {
+  margin-top: 2%;
+}
+
+
+.product-showcase-child-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2%;
+}
+
+
+
+.product-showcase {
+position: relative;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-items: center;
+margin-left: 10%;
+margin-bottom: 3%;
+
+
+}
+
+
+/* Buttons */
+.product-showcase-buttons{
+position: relative;
+border: none;
+z-index: 11;
+background-color: transparent;
+}
+
+.product-showcase-buttons img  {
+width: 20px;
+height: 100px;
+cursor: pointer;
+
+}
+
+.pre-btn {
+-webkit-transform: scaleX(-1);
+transform: scaleX(-1);
+
+}
+
+.nxt-btn {
+
+}
+
+
+
+
+/* Slider / card-showcase */
+
+
+/* blur */
+
+.blur-left {
+position: absolute; /* Will position itself relative to .parent */
+top: 0;
+left: 30px; /* This moves the blur slightly over child1 */
+width: 50px;
+height: 365px;
+background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 150%);
+backdrop-filter: blur(1px);
+z-index: 10; /* Ensures it overlaps other children */
+transform: rotate(180deg);
+
+}
+
+/* Blur effect for the right side */
+.blur-right {
+position: absolute;
+top: 0;
+right: 30px; /* This moves the blur slightly over child1 */
+width: 50px;
+height: 365px;
+background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 150%);
+backdrop-filter: blur(1px);
+z-index: 10; /* Ensures it overlaps other children */
+}
+
+
+
+.card-showcase {
+  
+  display: flex;
+  flex-direction: row;
+  grid-gap: 3%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+
+}
+
+/* Card */
+
+
+.card {
+  display: grid;
+  border: 4px solid #9A2626;
+  background: #FFF;
+  width: 260px;
+  height: 308px;
+}
+
+.card_image {
+  align-self: center;
+  justify-self: center;
+  width: 250px;
+  height: 300px;
+  object-fit: cover;
+
+}
+
+.card-display {
+  border: 4px solid #9A2626;
+  display: flex;
+  flex-direction: column;
+  background-color: #F34747;
+  justify-items: center; 
+  width: 260px;
+  height: 58px;
+  padding-bottom: 1vb;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.card-name {
+  text-align: center;
+  font-family: Inter, sans-serif;
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1.25px;
+  text-transform: capitalize;
+  margin-bottom: -5px; 
+  padding-bottom: 3%;
+}
+
+.card-price {
+text-align: center;
+  font-family: Inter, sans-serif;
+  color: #000;
+  font-size: 16px;
+  font-weight: 1000;
+  letter-spacing: 1.25px;
+  text-transform: capitalize;
+  margin-top: -5px; 
+}
+
+.card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 140px;
+    height: 165px;
+  }
+
+  .card-display {
+    width: 140px;
+    height: 30px;
+    padding-bottom: 20%;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .card_image {
+    width: 133px;
+    height: 165px;
+  }
+
+  .card-name {
+    font-size: 12px;
+    padding-bottom: 5%;
+    margin-top: 1%;
+  }
+
+  .card-price {
+    font-size: 12px;
+  }
+
+  .blur-left {
+    width: 10px;
+    height: 195px;
+  }
+  .blur-right {
+    width: 10px;
+    height: 195px;
+  }
+
+  .Line-break-horizontal {
+    width: 100px
+  }
+
+
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+.card {
+  width: 175px;
+  height: 215px;
+}
+
+.card-display {
+  width: 175px;
+  height: 41px;
+  padding-bottom: 10%;
+}
+
+.card_image {
+  width: 170px;
+  height: 215px;
+}
+
+
+.card-name {
+  font-size: 16px;
+  margin-top: -1%;
+}
+
+.card-price {
+  font-size: 16px;
+  margin-top: -2%;
+}
+
+.blur-left {
+  width: 20px;
+  height: 256px;
+}
+
+.blur-right {
+  width: 20px;
+  height: 256px;
+}
+}

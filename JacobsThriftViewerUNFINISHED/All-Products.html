@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/filter-form-style.css">
+    <link rel="stylesheet" href="styles/filter-main-style.css">
+    <link rel="stylesheet" href="styles/flip-style-1.css">
+    <link rel="stylesheet" href="styles/flip-style-2.css">
+    <link rel="stylesheet" href="styles/modal-style.css">
+    <link rel="stylesheet" href="styles/modal-style copy.css">
+    <link rel="stylesheet" href="styles/navbar-style.css">
+    <link rel="stylesheet" href="styles/product-display-style.css">
+    <link rel="stylesheet" href="styles/search-style.css">
+    <link rel="stylesheet" href="generate-button-style.css">
+    <link rel="stylesheet" href="styles/footer-header.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/header.css">
+
+
+
+    <title>All Products View</title>
+</head>
+<body>
+
+    <!-- Nav Bar -->
+    <div class="container">
+        <div class="mobile-navbar">
+
+            <div class="top-navbar">
+                <div class="logo">
+                    <i class="bx bxl-codepen"></i>
+                    <span>Jacob's Thift Viewer</span>
+                </div>
+                <i class="bx bx-menu" id="btn-mobile"></i>
+
+                <!-- Blank list for you to fill later -->
+                <ul>
+                    <li><a href="#"><img src="Nav-Images/Layer 6.png" alt=""></a></li>
+                </ul>
+
+            </div>
+
+            <div class="mobile-nav-list"> 
+
+
+                <!--Grailed -->
+                <li>
+                    <a href="#">
+                        <img src="Nav-Images/Layer 2.png" class="navbar-img">
+                        <span class="nav-item"> Grailed </span>
+                    </a>
+                </li>
+
+                <!-- Depop -->
+                <li>
+                    <a href="#">
+                        <img src="Nav-Images/Layer 1.png" class="navbar-img">
+                        <span class="nav-item"> Depop </span>
+                    </a>
+                </li>
+
+                <!--Ebay -->
+                <li>
+                    <a href="#">
+                        <img src="Nav-Images/Layer 3.png" class="navbar-img">
+                        <span class="nav-item"> Ebay </span>
+                    </a>
+                </li>
+
+                <!--All -->
+                <li>
+                    <a href="#" onclick="navigateTo('All-Products.html')">
+                        <img src="Nav-Images/Layer 7.png" class="navbar-img">
+                        <span class="nav-item"> All Products </span>
+                    </a>
+                </li>
+
+                <!--Cart -->
+                <li>
+                    <a href="#" onclick="navigateTo('want-cart.html')">
+                        <img src="Nav-Images/Layer 6.png" class="navbar-img">
+                        <span class="nav-item"> Want Cart </span>
+                    </a>
+                </li>
+            </div>
+
+        </div> 
+
+        <div class="sidebar">
+
+            <div class="top">
+                <div class="logo">
+                    <i class="bx bxl-codepen"> </i>
+                    <span> Jacob's Thift Viewer </span>
+                </div>
+                <i class="bx bx-menu" id="btn"> </i>
+
+            </div>
+            
+
+            <!--Grailed-->
+            <ul>
+                <li>
+                    <a href="#" onclick="navigateTo('grailed-view.html')">
+                        <img src="Nav-Images/Layer 2.png" alt="" class="nav-logo">
+                        <span class="nav-item"> Grailed </span>
+                    </a>
+                    <span class="tooltip"> Grailed </span>
+                </li>
+            </ul>
+
+
+            <!--Depop-->
+            <ul>
+                <li>
+                    <a href="#" onclick="navigateTo('depop-view.html')">
+                        <img src="Nav-Images/Layer 1.png" alt="" class="nav-logo" id="depop-logo">
+                        <span class="nav-item"> Depop </span>
+                    </a>
+                    <span class="tooltip"> Depop </span>
+                </li>
+            </ul>
+
+            <!--Ebay-->
+            <ul>
+                <li>
+                    <a href="#" onclick="navigateTo('ebay-view.html')">
+                        <img src="Nav-Images/Layer 3.png" alt="" class="nav-logo">
+                        <span class="nav-item">Ebay </span>
+                    </a>
+                    <span class="tooltip">  Ebay</span>
+                </li>
+            </ul>
+
+            <!--All-->
+            <ul>
+                <li>
+                    <a href="#" onclick="navigateTo('all-products.html')">
+                        <img src="Nav-Images/Layer 7.png" alt="" class="nav-logo">
+                        <span class="nav-item">All</span>
+                    </a>
+                    <span class="tooltip">  All Products</span>
+                </li>
+            </ul>
+
+            <!--Shopping Cart-->
+            <ul>
+                <li>
+                    <a href="#" onclick="navigateTo('want-cart.html')">
+                        <img src="Nav-Images/Layer 6.png" alt="" class="nav-logo" id="shoppingcart-logo">
+                        <span class="nav-item"> Cart  </span>
+                    </a>
+                    <span class="tooltip"> Cart </span>
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+
+    <!-- Filter-->
+    <div class="filter">
+        <div class="filter-head">
+            <h2 class="filter-display-text">Filter</h2>
+        </div>
+        <div class="filter-body">
+            <form autocomplete="off">
+                <div class="dropdown">
+                    <label class="filter-label dropdown-label"> Sample dropdown</label>
+                    <div class="select">
+                        <span class="selected"> Figma </span>
+                        <div class="caret"></div>
+                    </div>
+                    <ul class="menu">
+                        <li>sample </li>
+                        <li>sample </li>
+                        <li>sample </li>
+                        <li class="active"> Figma </li>
+                    </ul>
+                </div>
+
+                <div class="custom-checkbox">
+                    <label>
+                        <input type="checkbox">
+                        <span class="filter-label">Sample Checkbox</span>
+                    </label>
+                </div>
+
+                <div class="custom-input">
+                    <label for="input-text" class="filter-label">Sample Input</label>
+                    <input type="text" id="input-text" placeholder="Enter text">
+                </div>
+
+                <button class="button">SUBMIT</button>
+
+
+            </form>
+
+        </div>
+    </div>
+
+
+    <div class="main-content">
+        <!-- Header -->
+        <div class="header-container">
+            <h1>Viewing All</h1>
+            <div class="header-images">
+                <img src="Nav-Images/Layer 1.png" alt="">
+                <img src="Nav-Images/line-break.png" alt="">
+                <img src="Nav-Images/Layer 2.png" alt="">
+                <img src="Nav-Images/line-break.png" alt="">
+                <img src="Nav-Images/Layer 3.png" alt="">
+                <img src="Nav-Images/line-break.png" alt="">
+                <img src="Nav-Images/Layer 4.png" alt="">
+            </div>
+            <p class="hint-text"> To use the web app,  just enter a query, <br> scroll through the product display, <br> and add any item to the Want List through its model.</p>
+        </div>
+
+        <!-- Search Bar-->
+        <div class="search-bar-container">
+            <label for=""> Search Bar</label>
+            <div class="search-bar">
+                <img src="images/magnifying-glass-png-transparent-9.jpg">
+                <p class="search-seperator"> | </p>
+                <form action="">
+                    <input type="text" id="search-input" placeholder="Type here to search...">
+                </form>
+            </div>
+        </div>
+
+        <!-- Product Display-->
+        <div class="product-showcase-parent-container">
+
+            <!--Depop-->
+            <div class="product-showcase-child-container">
+                <img src="Nav-Images/Layer 1.png" alt="">
+                <img src="Nav-Images/Line-break-horizontal.png" alt="" class="Line-break-horizontal">
+            </div>
+            <div class="product-showcase">
+
+                    <button class="pre-btn product-showcase-buttons"><img src="placeholder_images/arrow.png" href=""></button>
+            
+                    <div class="blur-left"></div>
+            
+                    <div class="card-showcase">
+            
+            
+                            <div>
+                                <!--Card Name-->
+                                <div class="card">
+                                    <img src="placeholder_images/slider-1.jpg" alt="card 1" class="card_image">
+                                </div>
+                                <div class="card-display">
+                                    <h1 class="card-name"> Sample </h1>
+                                    <span class="card-price">10$</span> 
+                                </div>
+                                <!--Modal-->
+                                <div class="modal">
+                                    <div class="modal_card">
+                                        <i class="bx bxs-right-top-arrow-circle modal_close"> </i>
+            
+                                        <img src="placeholder_images/slider-1.jpg" alt="" class="modal_img">
+            
+                                        <div>
+                                            <h3 class="modal_name">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum reprehenderit animi ab amet. Adipisci cumque itaque qui eum cupiditate?
+                                            </h3>
+                                            <p class="modal_info">Lorem ipsum dolor sit amet.
+                                            </p>
+                                            <span class="modal_price"> 10$</span>
+                                        </div>
+            
+                                        <button class="modal_button">Add To Cart</button>
+            
+                                    </div>
+                                    
+                                </div>
+                            </div>
+            
+                            <div>
+                                <!--Card Name-->
+                                <div class="card">
+                                    <img src="placeholder_images/slider-2.jpg" alt="card 1" class="card_image">
+                                </div>
+                                <div class="card-display">
+                                    <h1 class="card-name"> Sample </h1>
+                                    <span class="card-price">10$</span> 
+                                </div>
+                                <!--Modal-->
+                                <div class="modal">
+                                    <div class="modal_card">
+                                        <i class="bx bxs-right-top-arrow-circle modal_close"> </i>
+            
+                                        <img src="placeholder_images/slider-2.jpg" alt="" class="modal_img">
+            
+                                        <div>
+                                            <h3 class="modal_name">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum reprehenderit animi ab amet. Adipisci cumque itaque qui eum cupiditate?
+                                            </h3>
+                                            <p class="modal_info">Lorem ipsum dolor sit amet.
+                                            </p>
+                                            <span class="modal_price"> 10$</span>
+                                        </div>
+            
+                                        <button class="modal_button">Add To Cart</button>
+            
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <!--Card Name-->
+                                <div class="card">
+                                    <img src="placeholder_images/slider-3.jpg" alt="card 1" class="card_image">
+                                </div>
+                                <div class="card-display">
+                                    <h1 class="card-name"> Sample </h1>
+                                    <span class="card-price">10$</span> 
+                                </div>
+                                <!--Modal-->
+                                <div class="modal">
+                                    <div class="modal_card">
+                                        <i class="bx bxs-right-top-arrow-circle modal_close"> </i>
+            
+                                        <img src="placeholder_images/slider-3.jpg" alt="" class="modal_img">
+            
+                                        <div>
+                                            <h3 class="modal_name">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum reprehenderit animi ab amet. Adipisci cumque itaque qui eum cupiditate?
+                                            </h3>
+                                            <p class="modal_info">Lorem ipsum dolor sit amet.
+                                            </p>
+                                            <span class="modal_price"> 10$</span>
+                                        </div>
+            
+                                        <button class="modal_button">Add To Cart</button>
+            
+                                    </div>
+                                    
+                                </div>
+                            </div>
+            
+                            <div>
+                                <!--Card Name-->
+                                <div class="card">
+                                    <img src="placeholder_images/slider-4.jpg" alt="card 1" class="card_image">
+                                </div>
+                                <div class="card-display">
+                                    <h1 class="card-name"> Sample </h1>
+                                    <span class="card-price">10$</span> 
+                                </div>
+                                <!--Modal-->
+                                <div class="modal">
+                                    <div class="modal_card">
+                                        <i class="bx bxs-right-top-arrow-circle modal_close"> </i>
+            
+                                        <img src="placeholder_images/slider-4.jpg" alt="" class="modal_img">
+            
+                                        <div>
+                                            <h3 class="modal_name">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum reprehenderit animi ab amet. Adipisci cumque itaque qui eum cupiditate?
+                                            </h3>
+                                            <p class="modal_info">Lorem ipsum dolor sit amet.
+                                            </p>
+                                            <span class="modal_price"> 10$</span>
+                                        </div>
+            
+                                        <button class="modal_button">Add To Cart</button>
+            
+                                    </div>
+                                    
+                                </div>
+                            </div>
+            
+                            <div>
+                                <!--Card Name-->
+                                <div class="card">
+                                    <img src="placeholder_images/slider-5.jpg" alt="card 1" class="card_image">
+                                </div>
+                                <div class="card-display">
+                                    <h1 class="card-name"> Sample </h1>
+                                    <span class="card-price">10$</span> 
+                                </div>
+                                <!--Modal-->
+                                <div class="modal">
+                                    <div class="modal_card">
+                                        <i class="bx bxs-right-top-arrow-circle modal_close"> </i>
+            
+                                        <img src="placeholder_images/slider-5.jpg" alt="" class="modal_img">
+            
+                                        <div>
+                                            <h3 class="modal_name">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum reprehenderit animi ab amet. Adipisci cumque itaque qui eum cupiditate?
+                                            </h3>
+                                            <p class="modal_info">Lorem ipsum dolor sit amet.
+                                            </p>
+                                            <span class="modal_price"> 10$</span>
+                                        </div>
+            
+                                        <button class="modal_button">Add To Cart</button>
+            
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div>
+                                <!--Card Name-->
+                                <div class="card">
+                                    <img src="placeholder_images/slider-6.jpg" alt="card 1" class="card_image">
+                                </div>
+                                <div class="card-display">
+                                    <h1 class="card-name"> Sample </h1>
+                                    <span class="card-price">10$</span> 
+                                </div>
+                                <!--Modal-->
+                                <div class="modal">
+                                    <div class="modal_card">
+                                        <i class="bx bxs-right-top-arrow-circle modal_close"> </i>
+                
+                                        <img src="placeholder_images/slider-6.jpg" alt="" class="modal_img">
+                
+                                        <div>
+                                            <h3 class="modal_name">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum reprehenderit animi ab amet. Adipisci cumque itaque qui eum cupiditate?
+                                            </h3>
+                                            <p class="modal_info">Lorem ipsum dolor sit amet.
+                                            </p>
+                                            <span class="modal_price"> 10$</span>
+                                        </div>
+                
+                                        <button class="modal_button">Add To Cart</button>
+                
+                                    </div>
+                                    
+                                </div>
+                            </div>
+            
+            
+                    </div>
+            
+                    <div class="blur-right"></div>
+            
+                    <button class="nxt-btn product-showcase-buttons"><img src="placeholder_images/arrow.png" href=""></button>
+                
+            
+            </div>
+
+            <!--Grailed-->
+            <div class="product-showcase-child-container">
+                <img src="Nav-Images/Layer 2.png" alt="">
+                <img src="Nav-Images/Line-break-horizontal.png" alt="" class="Line-break-horizontal">
+            </div>
+            <div class="product-showcase">
+
+                    <button class="pre-btn product-showcase-buttons"><img src="placeholder_images/arrow.png" href=""></button>
+            
+                    <div class="blur-left"></div>
+            
+                    <div class="card-showcase">
+            
+            
+                        <div>
+                            <!--Card Name-->
+                            <div class="card">
+                                <img src="placeholder_images/slider-1.jpg" alt="card 1" class="card_image">
+                            </div>
+                            <div class="card-display">
+                                <h1 class="card-name"> Sample </h1>
+                                <span class="card-price">10$</span> 
+                            </div>
+                            <!--Modal-->
+                            <div class="modal">
+                                <div class="modal_card">
+                                    <i class="bx bxs-right-top-arrow-circle modal_close"> </i>
+        
+                                    <img src="placeholder_images/slider-1.jpg" alt="" class="modal_img">
+        
+                                    <div>
+                                        <h3 class="modal_name">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum reprehenderit animi ab amet. Adipisci cumque itaque qui eum cupiditate?
+                                        </h3>
+                                        <p class="modal_info">Lorem ipsum dolor sit amet.
+                                        </p>
+                                        <span class="modal_price"> 10$</span>
+                                    </div>
+        
+                                    <button class="modal_button">Add To Cart</button>
+        
+                                </div>
+                                
+                            </div>
+                        </div>
+        
+                        <div>
+                            <!--Card Name-->
+                            <div class="card">
+                                <img src="placeholder_images/slider-2.jpg" alt="card 1" class="card_image">
+                            </div>
+                            <div class="card-display">
+                                <h1 class="card-name"> Sample </h1>
+                                <span class="card-price">10$</span> 
+                            </div>
+                            <!--Modal-->
+                            <div class="modal">
+                                <div class="modal_card">
+                                    <i class="bx bxs-right-top-arrow-circle modal_close"> </i>
+        
+                                    <img src="placeholder_images/slider-2.jpg" alt="" class="modal_img">
+        
+                                    <div>
+                                        <h3 class="modal_name">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum reprehenderit animi ab amet. Adipisci cumque itaque qui eum cupiditate?
+                                        </h3>
+                                        <p class="modal_info">Lorem ipsum dolor sit amet.
+                                        </p>
+                                        <span class="modal_price"> 10$</span>
+                                    </div>
+        
+                                    <button class="modal_button">Add To Cart</button>
+        
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <!--Card Name-->
+                            <div class="card">
+                                <img src="placeholder_images/slider-3.jpg" alt="card 1" class="card_image">
+                            </div>
+                            <div class="card-display">
+                                <h1 class="card-name"> Sample </h1>
+                                <span class="card-price">10$</span> 
+                            </div>
+                            <!--Modal-->
+                            <div class="modal">
+                                <div class="modal_card">
+                                    <i class="bx bxs-right-top-arrow-circle modal_close"> </i>
+        
+                                    <img src="placeholder_images/slider-3.jpg" alt="" class="modal_img">
+        
+                                    <div>
+                                        <h3 class="modal_name">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum reprehenderit animi ab amet. Adipisci cumque itaque qui eum cupiditate?
+                                        </h3>
+                                        <p class="modal_info">Lorem ipsum dolor sit amet.
+                                        </p>
+                                        <span class="modal_price"> 10$</span>
+                                    </div>
+        
+                                    <button class="modal_button">Add To Cart</button>
+        
+                                </div>
+                                
+                            </div>
+                        </div>
+        
+                        <div>
+                            <!--Card Name-->
+                            <div class="card">
+                                <img src="placeholder_images/slider-4.jpg" alt="card 1" class="card_image">
+                            </div>
+                            <div class="card-display">
+                                <h1 class="card-name"> Sample </h1>
+                                <span class="card-price">10$</span> 
+                            </div>
+                            <!--Modal-->
+                            <div class="modal">
+                                <div class="modal_card">
+                                    <i class="bx bxs-right-top-arrow-circle modal_close"> </i>
+        
+                                    <img src="placeholder_images/slider-4.jpg" alt="" class="modal_img">
+        
+                                    <div>
+                                        <h3 class="modal_name">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum reprehenderit animi ab amet. Adipisci cumque itaque qui eum cupiditate?
+                                        </h3>
+                                        <p class="modal_info">Lorem ipsum dolor sit amet.
+                                        </p>
+                                        <span class="modal_price"> 10$</span>
+                                    </div>
+        
+                                    <button class="modal_button">Add To Cart</button>
+        
+                                </div>
+                                
+                            </div>
+                        </div>
+        
+                        <div>
+                            <!--Card Name-->
+                            <div class="card">
+                                <img src="placeholder_images/slider-5.jpg" alt="card 1" class="card_image">
+                            </div>
+                            <div class="card-display">
+                                <h1 class="card-name"> Sample </h1>
+                                <span class="card-price">10$</span> 
+                            </div>
+                            <!--Modal-->
+                            <div class="modal">
+                                <div class="modal_card">
+                                    <i class="bx bxs-right-top-arrow-circle modal_close"> </i>
+        
+                                    <img src="placeholder_images/slider-5.jpg" alt="" class="modal_img">
+        
+                                    <div>
+                                        <h3 class="modal_name">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum reprehenderit animi ab amet. Adipisci cumque itaque qui eum cupiditate?
+                                        </h3>
+                                        <p class="modal_info">Lorem ipsum dolor sit amet.
+                                        </p>
+                                        <span class="modal_price"> 10$</span>
+                                    </div>
+        
+                                    <button class="modal_button">Add To Cart</button>
+        
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div>
+                            <!--Card Name-->
+                            <div class="card">
+                                <img src="placeholder_images/slider-6.jpg" alt="card 1" class="card_image">
+                            </div>
+                            <div class="card-display">
+                                <h1 class="card-name"> Sample </h1>
+                                <span class="card-price">10$</span> 
+                            </div>
+                            <!--Modal-->
+                            <div class="modal">
+                                <div class="modal_card">
+                                    <i class="bx bxs-right-top-arrow-circle modal_close"> </i>
+            
+                                    <img src="placeholder_images/slider-6.jpg" alt="" class="modal_img">
+            
+                                    <div>
+                                        <h3 class="modal_name">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum reprehenderit animi ab amet. Adipisci cumque itaque qui eum cupiditate?
+                                        </h3>
+                                        <p class="modal_info">Lorem ipsum dolor sit amet.
+                                        </p>
+                                        <span class="modal_price"> 10$</span>
+                                    </div>
+            
+                                    <button class="modal_button">Add To Cart</button>
+            
+                                </div>
+                                
+                            </div>
+                        </div>
+        
+        
+                    </div>
+            
+                    <div class="blur-right"></div>
+            
+                    <button class="nxt-btn product-showcase-buttons"><img src="placeholder_images/arrow.png" href=""></button>
+                
+            
+            </div>
+
+            <!--Ebay-->
+            <div class="product-showcase-child-container">
+                <img src="Nav-Images/Layer 3.png" alt="">
+                <img src="Nav-Images/Line-break-horizontal.png" alt="" class="Line-break-horizontal">
+            </div>
+            <div class="product-showcase">
+
+                <button class="pre-btn product-showcase-buttons"><img src="placeholder_images/arrow.png" href=""></button>
+        
+                <div class="blur-left"></div>
+        
+                <div class="card-showcase">
+            
+            
+                    <div>
+                        <!--Card Name-->
+                        <div class="card">
+                            <img src="placeholder_images/slider-1.jpg" alt="card 1" class="card_image">
+                        </div>
+                        <div class="card-display">
+                            <h1 class="card-name"> Sample </h1>
+                            <span class="card-price">10$</span> 
+                        </div>
+                        <!--Modal-->
+                        <div class="modal">
+                            <div class="modal_card">
+                                <i class="bx bxs-right-top-arrow-circle modal_close"> </i>
+    
+                                <img src="placeholder_images/slider-1.jpg" alt="" class="modal_img">
+    
+                                <div>
+                                    <h3 class="modal_name">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum reprehenderit animi ab amet. Adipisci cumque itaque qui eum cupiditate?
+                                    </h3>
+                                    <p class="modal_info">Lorem ipsum dolor sit amet.
+                                    </p>
+                                    <span class="modal_price"> 10$</span>
+                                </div>
+    
+                                <button class="modal_button">Add To Cart</button>
+    
+                            </div>
+                            
+                        </div>
+                    </div>
+    
+                    <div>
+                        <!--Card Name-->
+                        <div class="card">
+                            <img src="placeholder_images/slider-2.jpg" alt="card 1" class="card_image">
+                        </div>
+                        <div class="card-display">
+                            <h1 class="card-name"> Sample </h1>
+                            <span class="card-price">10$</span> 
+                        </div>
+                        <!--Modal-->
+                        <div class="modal">
+                            <div class="modal_card">
+                                <i class="bx bxs-right-top-arrow-circle modal_close"> </i>
+    
+                                <img src="placeholder_images/slider-2.jpg" alt="" class="modal_img">
+    
+                                <div>
+                                    <h3 class="modal_name">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum reprehenderit animi ab amet. Adipisci cumque itaque qui eum cupiditate?
+                                    </h3>
+                                    <p class="modal_info">Lorem ipsum dolor sit amet.
+                                    </p>
+                                    <span class="modal_price"> 10$</span>
+                                </div>
+    
+                                <button class="modal_button">Add To Cart</button>
+    
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <!--Card Name-->
+                        <div class="card">
+                            <img src="placeholder_images/slider-3.jpg" alt="card 1" class="card_image">
+                        </div>
+                        <div class="card-display">
+                            <h1 class="card-name"> Sample </h1>
+                            <span class="card-price">10$</span> 
+                        </div>
+                        <!--Modal-->
+                        <div class="modal">
+                            <div class="modal_card">
+                                <i class="bx bxs-right-top-arrow-circle modal_close"> </i>
+    
+                                <img src="placeholder_images/slider-3.jpg" alt="" class="modal_img">
+    
+                                <div>
+                                    <h3 class="modal_name">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum reprehenderit animi ab amet. Adipisci cumque itaque qui eum cupiditate?
+                                    </h3>
+                                    <p class="modal_info">Lorem ipsum dolor sit amet.
+                                    </p>
+                                    <span class="modal_price"> 10$</span>
+                                </div>
+    
+                                <button class="modal_button">Add To Cart</button>
+    
+                            </div>
+                            
+                        </div>
+                    </div>
+    
+                    <div>
+                        <!--Card Name-->
+                        <div class="card">
+                            <img src="placeholder_images/slider-4.jpg" alt="card 1" class="card_image">
+                        </div>
+                        <div class="card-display">
+                            <h1 class="card-name"> Sample </h1>
+                            <span class="card-price">10$</span> 
+                        </div>
+                        <!--Modal-->
+                        <div class="modal">
+                            <div class="modal_card">
+                                <i class="bx bxs-right-top-arrow-circle modal_close"> </i>
+    
+                                <img src="placeholder_images/slider-4.jpg" alt="" class="modal_img">
+    
+                                <div>
+                                    <h3 class="modal_name">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum reprehenderit animi ab amet. Adipisci cumque itaque qui eum cupiditate?
+                                    </h3>
+                                    <p class="modal_info">Lorem ipsum dolor sit amet.
+                                    </p>
+                                    <span class="modal_price"> 10$</span>
+                                </div>
+    
+                                <button class="modal_button">Add To Cart</button>
+    
+                            </div>
+                            
+                        </div>
+                    </div>
+    
+                    <div>
+                        <!--Card Name-->
+                        <div class="card">
+                            <img src="placeholder_images/slider-5.jpg" alt="card 1" class="card_image">
+                        </div>
+                        <div class="card-display">
+                            <h1 class="card-name"> Sample </h1>
+                            <span class="card-price">10$</span> 
+                        </div>
+                        <!--Modal-->
+                        <div class="modal">
+                            <div class="modal_card">
+                                <i class="bx bxs-right-top-arrow-circle modal_close"> </i>
+    
+                                <img src="placeholder_images/slider-5.jpg" alt="" class="modal_img">
+    
+                                <div>
+                                    <h3 class="modal_name">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum reprehenderit animi ab amet. Adipisci cumque itaque qui eum cupiditate?
+                                    </h3>
+                                    <p class="modal_info">Lorem ipsum dolor sit amet.
+                                    </p>
+                                    <span class="modal_price"> 10$</span>
+                                </div>
+    
+                                <button class="modal_button">Add To Cart</button>
+    
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <!--Card Name-->
+                        <div class="card">
+                            <img src="placeholder_images/slider-6.jpg" alt="card 1" class="card_image">
+                        </div>
+                        <div class="card-display">
+                            <h1 class="card-name"> Sample </h1>
+                            <span class="card-price">10$</span> 
+                        </div>
+                        <!--Modal-->
+                        <div class="modal">
+                            <div class="modal_card">
+                                <i class="bx bxs-right-top-arrow-circle modal_close"> </i>
+        
+                                <img src="placeholder_images/slider-6.jpg" alt="" class="modal_img">
+        
+                                <div>
+                                    <h3 class="modal_name">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum reprehenderit animi ab amet. Adipisci cumque itaque qui eum cupiditate?
+                                    </h3>
+                                    <p class="modal_info">Lorem ipsum dolor sit amet.
+                                    </p>
+                                    <span class="modal_price"> 10$</span>
+                                </div>
+        
+                                <button class="modal_button">Add To Cart</button>
+        
+                            </div>
+                            
+                        </div>
+                    </div>
+    
+    
+                </div>
+        
+                <div class="blur-right"></div>
+        
+                <button class="nxt-btn product-showcase-buttons"><img src="placeholder_images/arrow.png" href=""></button>
+            
+        
+            </div>
+
+            
+        </div>
+
+
+        <button class="generate-content-btn">
+            Generate New Content
+        </button>
+
+
+        <div class="footer-container">
+
+            <p> Made By Jacob</p>
+
+            <div class="footer">
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <script src="scripts/script.js"> </script>
+
+
+</body>
+</html>

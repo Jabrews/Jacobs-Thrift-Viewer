@@ -1,0 +1,96 @@
+.filter {
+    margin-top: 1%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    right: 0;
+    z-index: 14;
+}
+
+.filter-head {
+    width: 73px;
+    height: 550px;
+    background-color: rgb(255, 12, 12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.filter-display-text {
+    transform: rotate(-90deg);
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 132%; /* 47.52px */
+    letter-spacing: 12.24px;
+    text-transform: uppercase;
+    margin-top: 10%;
+}
+
+/* Initially hidden */
+.filter-body {
+    display: none;
+    opacity: 0;
+    background-color: rgb(255, 12, 12);
+    transition: opacity 0.5s ease; /* Transition for opacity */
+    flex-direction: column;
+    padding-top: 10%;
+}
+
+/* When filter-body is visible, opacity transitions */
+.filter-body.show {
+    display: flex;
+    opacity: 1;
+    flex-wrap: wrap;
+}
+
+.filter-body form {
+    position: relative;
+    left : 0;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    
+    .filter {
+        margin-top: 20%;
+    }
+
+    .filter-head {
+        width: 62px;
+        height: 650px;
+    
+    }
+
+    .filter-label {
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    .filter {
+        margin-top: 30%;
+    }
+
+    .filter-head {
+        width: 16px;
+        height: 500px;
+    }
+
+    .filter-label {
+        font-size: 10px;
+    }
+
+    .filter-display-text {
+        font-size: 16px;
+    }
+
+
+}

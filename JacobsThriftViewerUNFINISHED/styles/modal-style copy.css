@@ -1,0 +1,140 @@
+/* Modal */
+:root {
+  --body-color: #FFFFFF;
+  --title-color: #000000;
+  --first-color: #FF0000;
+  --first-color-alt: #CC0000;
+  --white-color: #FFFFFF;
+  --font-semi-bold: 600;
+  --normal-font-size: 1rem;
+  --h2-font-size: 1.5rem;
+  --body-font: 'Montserrat', sans-serif;
+  --z-modal: 10;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: hsla(5, 90%, 4%, .2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(24px);
+    display: grid;
+    place-items: center;
+    padding: 2rem 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 20;
+    transition: opacity .4s, visibility .4s;
+  }
+  
+  .modal_card {
+    position: relative;
+    background-color: var(--body-color);
+    padding: 2rem 1.5rem; 
+    display: grid;
+    row-gap: 1.5rem;
+    text-align: center;
+    transform: rotateX(90deg);
+    transition: transform 0.6s;
+    max-width: 50vb; 
+    width: 100%; 
+
+}
+  .modal_close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--title-color);
+    cursor: pointer;
+  }
+  
+  .modal_img {
+    width: 220px;
+    justify-self: center;
+    filter: drop-shadow(0 8px 16px hsla(5, 90%, 4%, .2));
+  }
+  
+  .modal_name {
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    margin-bottom: .5rem;
+  }
+  
+  .modal_info {
+    margin-bottom: 1rem;
+  }
+  
+  .modal_price {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--first-color);
+  }
+  
+  .modal__buttons {
+    display: flex;
+    gap: .5rem;
+  }
+  
+  .modal_button {
+    flex-grow: 1;
+    outline: none;
+    border: none;
+    background-color: var(--first-color);
+    padding-block: 1rem;
+    color: var(--white-color);
+    font: var(--font-semi-bold) var(--normal-font-size) var(--body-font);
+    cursor: pointer;
+    transition: background-color .4s;
+  }
+  
+  .modal_button:hover {
+    background-color: var(--first-color-alt);
+  }
+  
+  .modal_button-ghost {
+    background-color: var(--body-color);
+    color: var(--title-color);
+    border: 3px solid var(--first-color);
+  }
+  
+  .modal_button-ghost:hover {
+    background-color: var(--body-color);
+  }
+  
+  /* Active modal */
+  .active-modal {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+  }
+  
+  .active-modal .modal_card {
+    transform: rotateX(0);
+  }
+
+
+  @media screen and (max-width: 600px) {
+    .modal_card {
+      max-width: 90vw; /* Make sure modal fits smaller screens */
+      padding: 1rem; /* Reduce padding */
+    }
+
+    .modal_name {
+      font-size: 1.2rem; /* Scale down title font size */
+    }
+
+    .modal_info {
+      font-size: 0.85rem; /* Scale down info text */
+    }
+
+    .modal_price {
+      font-size: 1.2rem; /* Reduce the price font size */
+    }
+
+    .modal_img {
+      width: 180px; /* Adjust image size */
+    }
+
+  }

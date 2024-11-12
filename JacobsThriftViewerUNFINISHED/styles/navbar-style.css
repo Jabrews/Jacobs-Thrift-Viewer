@@ -1,0 +1,360 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-img {
+    width: 50px;
+    border-radius: 100%;
+    border: 1px solid black;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; /* takes up entire screen*/
+    width: 100px;
+    background: rgb(204, 51, 51, 0.6);
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    background-blend-mode: overlay; /* Optional: blends the gradient for a textured look */
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5); /* Adds depth */
+    transition: all 0.2s ease; /* Fixed typo (missing s) */
+    z-index: 10;
+}
+
+
+.main-content {
+    transition: all 0.5s ease;
+    padding: 20px;
+}
+
+
+.sidebar.active {
+    width: 250px;
+}
+
+.sidebar #btn {
+    position: absolute;
+    color: white;
+    top: .4rem;
+    left: 50%;
+    font-size: 1.2rem;
+    line-height: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.sidebar.active #btn {
+    left: 90%;
+}
+
+.sidebar .top .logo {
+    color : white;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.sidebar.active .top .logo {
+    opacity: 1;
+}
+
+.sidebar ul {
+    padding-left: 1em;
+    padding-right: 1em;
+
+}
+
+.top .logo i {
+    font-size: 2rem;
+    margin-right: 2px;
+}
+
+
+.user {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.user p {
+    color : white;
+    opacity: 1;
+    margin-left: .6rem;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.sidebar p {
+    opacity: 0;
+}
+
+.nav-logo {
+    align-items: center;
+    justify-content: center;
+    height: 15%;
+    border-radius: 15px;
+    cursor: pointer;
+    background: rgb(225, 136, 136);
+    margin-left: 10%
+
+
+}
+
+
+
+.sidebar.active p {
+    opacity: 1;
+}
+
+.sidebar.active #etsy-logo {
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+
+.sidebar.active #depop-logo {
+
+}
+
+.sidebar.active #shoppingcart-logo {
+    margin-left: 15%;
+}
+
+
+
+.sidebar ul li {
+    position: relative;
+    list-style-type: none;
+    height: 50px;
+    width: 90%;
+    margin: 0.8rem auto;
+    line-height: 50px;
+
+}
+
+.sidebar ul li a {
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+}
+
+.sidebar ul li a:hover {
+    background-color: white;
+    color: black;
+    margin-right: 20%;
+    padding-left: 20%;
+}
+
+.sidebar ul li a i {
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+
+
+.top-navbar .bx {
+    color: white;
+    cursor: pointer;
+    font-size: 5vb;
+}
+
+
+.sidebar .nav-item {
+    opacity: 0;
+}
+
+.sidebar.active .nav-item {
+    opacity: 1;
+    padding-left: 10%;
+}
+
+.sidebar ul li .tooltip {
+    position: absolute;
+    left: 200%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0.5rem 0.8rem rgba(0,0,0,0.2);
+    border-radius: .6rem;
+    padding: .4rem 1.2rem;
+    line-height: 1.8rem;
+    z-index: 20;
+    opacity: 0;
+}
+
+.sidebar ul li:hover .tooltip {
+    display: block;
+    opacity: 1;
+    z-index: 11;
+}
+
+.sidebar .tooltip {
+    display: none;;
+}
+
+.sidebar.active ul li:hover .tooltip {
+    display: none;
+}
+
+.main-content {
+    position: relative;
+    left: 80px;
+}
+
+.mobile-navbar {
+    display: none;
+}
+
+
+
+/* Remove the sidebar for screen widths between 601px and 1024px, and display a top horizontal navbar instead */
+@media screen and (max-width: 1024px) {
+
+    .mobile-navbar {
+        display: block;
+        position: fixed;
+        z-index: 1000;
+        width: 100%; /* Ensure it covers the full width of the screen */
+        left: 0;
+        top: 0;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+
+    .mobile-nav-list {
+        display: none;
+        list-style-type: none;
+        box-shadow: 4px 0 10px rgba(0, 0, 0, 0.5); /* Adds depth */
+    }
+
+    .active {
+        display: block;
+    }
+
+    .mobile-nav-list li {
+        color: white;
+        text-decoration: none;
+        display: grid;
+        grid-template-columns: 1fr;
+        background-color: red;
+        background: rgb(204, 51, 51, 0.6);
+        backdrop-filter: blur(10px); /* Frosted glass effect */
+        background-blend-mode: overlay; /* Optional: blends the gradient for a textured look */
+        align-items: center;
+        justify-items: center;
+        font-size: 3vb;
+
+    }
+
+    .mobile-nav-list li:hover {
+        background-color: rgb(0, 0, 0);
+    }
+
+
+
+    .mobile-nav-list img {
+        height: 50px;
+        width : 50px;
+    }
+
+    .mobile-nav-list a {
+        color: white;
+        text-decoration: none;
+    }
+
+
+
+    .top-navbar {
+        display: block;
+        top: 0;
+        left: 0;
+        background: rgba(204, 51, 51, 0.8); /* Same red background with slight transparency */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Add some shadow for depth */
+        z-index: 1000;
+        font-size: 2vb;
+    }
+    
+
+
+
+    /* Logo on the left */
+    .top-navbar .logo {
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+
+    .top-navbar .logo i {
+        font-size: 2rem;
+        margin-right: 10px;
+    }
+
+    /* Toggle button on the right (same as sidebar button) */
+    .top-navbar #btn {
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /* Blank list for you to fill later */
+    .top-navbar ul {
+        display: flex;
+        list-style: none;
+    }
+
+    .top-navbar ul li {
+        margin-left: 20px;
+    }
+
+    .top-navbar ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .top-navbar ul li a:hover {
+        color: lightgray;
+    }
+
+    .main-content {
+        margin-top: 10%;
+        padding: 0;
+        left: 0; /* Remove the offset caused by the sidebar */
+    }
+}
+
+@media screen and (min-width: 760px) {
+    .main-content {
+    }
+
+
+    .mobile-nav-list {
+        font-size: 5vb;
+    }
+
+
+
+}
